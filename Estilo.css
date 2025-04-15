@@ -1,0 +1,543 @@
+body {
+    font-family: 'Source Code Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 2.3em;
+}
+
+nav ul li a {
+    font-family: 'Source Code Pro', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: #A55781;
+}
+
+a {
+    font-family: 'Source Code Pro', sans-serif;
+}
+
+nav .logo {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+nav .logo img {
+    height: 70px;
+}
+
+#home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+/*Barra siguente temas a futuro*/
+.sidebar-left, .sidebar-right {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #642F75;
+    color: white;
+    padding: 1em;
+    writing-mode: vertical-rl;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 0 10px 10px 0;
+}
+
+.sidebar-left {
+    left: 0;
+}
+
+.sidebar-right {
+    right: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.sidebar-left a, .sidebar-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8em;
+    display: block;
+}
+
+.sidebar-left a {
+    transform: rotate(180deg);
+}
+
+/* Segunda parte */
+#quienes-somos {
+    position: relative;
+    background-image: url('Imagenes/fondos de pantalla-02.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+#quienes-somos h2 {
+    text-align: center;
+    font-family: 'Argent CF Demi Bold', serif;
+    font-size: 4em;
+    margin-bottom: 0.1em;
+    color: #642F75;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1400px;
+    padding: 0em 2em;
+}
+
+.about-images {
+    flex: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 1em;
+}
+
+.about-images h3 {
+    font-family: 'Argent CF Demi Bold', serif;
+    color: #642F75;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.about-images img {
+    max-width: 100%;
+    height: 40vh;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+.owner-info p {
+    font-family: 'Flareserif 821 Light BT', serif;
+    font-size: 1.7em;
+    color: #642F75;
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+.about-info {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    padding-left: 3em;
+    border-left: 2px solid #642F75;
+}
+
+.info-column {
+    margin-bottom: 0.1em;
+}
+
+.info-column h3 {
+    font-family: 'Argent CF Demi Bold', serif;
+    color: #642F75;
+    font-size: 3em;
+    margin-bottom: 0.1em;
+}
+
+.info-column p {
+    font-family: 'Flareserif 821 Light BT', serif;
+    font-size: 1.7em;
+    color: #642F75;
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+/* Tercera parte*/
+#servicios {
+    position: relative;
+    background-image: url('Imagenes/fondos de pantalla-03.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 108vh;
+    padding: 2em 2em;
+    color: white;
+}
+
+#servicios h2 {
+    text-align: center;
+    font-family: 'Argent CF Demi Bold', serif;
+    font-size: 4em;
+    margin-bottom: 0.1em;
+    color: #642F75;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service-item {
+    background: rgba(1, 0, 0, 0.5);
+    padding: 1em;
+    margin: 0.5em;
+    width: 29%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.service-item h3 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #642F75;
+}
+
+.service-item p {
+    font-family: 'Flareserif 821 Light BT', serif;
+    font-size: 1em;
+}
+
+.service-item .price {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: #F4D03F;
+    margin-top: 0.5em;
+}
+
+/*Cuarta parte*/
+#horarios {
+    position: relative;
+    background-image: url('Imagenes/fondos de pantalla-04.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 2em 2em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opening-hours {
+    position: relative;
+    background-color: rgba(242, 242, 242, 0.9);
+    padding: 4em 2em;
+    text-align: center;
+    color: #642F75;
+}
+
+.opening-hours .content {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 1 auto;
+    padding: 2em;
+}
+
+.opening-hours h2 {
+    text-align: center;
+    font-family: 'Argent CF Demi Bold', serif;
+    font-size: 4em;
+    margin-bottom: 0.1em;
+    color: #642F75;
+}
+
+.opening-hours p {
+    font-family: 'Flareserif 821 Light BT', serif;
+    font-size: 2em;
+    color: #642F75;
+    margin-bottom: 0.1em;
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.info-item {
+    flex: 1;
+    margin: 0.1em;
+    max-width: 40%;
+}
+
+.info-item h3 {
+    font-family: 'Argent CF Demi Bold', serif;
+    font-size: 3em;
+    margin-bottom: 0.1em;
+    color: #642F75;
+}
+
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-item {
+        max-width: 100%;
+    }
+}
+
+/*Quinta parte*/
+#contacto {
+    position: relative;
+    background-image: url('Imagenes/Recurso.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 2em 2em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-section {
+    background-color: #642F75; 
+    padding: 4em 2em;
+    border-radius: 10px;
+}
+
+.contact-section .content {
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contact-section h2 {
+    font-family: 'Argent CF Demi Bold', serif;
+    font-size: 4em;
+    margin-bottom: 0.5em;
+    color: #ffffff;
+}
+
+.contact-section p {
+    font-family: 'Flareserif 821 Light BT', serif;
+    font-size: 1.5em;
+    text-align: justify;
+    color: #ffffff;
+}
+
+.contact-section p strong {
+    font-family: 'Flareserif 821 Light BT', serif;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    text-align: justify;
+    color: #000000;
+}
+
+.developer-image {
+    margin-top: 1em;
+    max-width: 100%;
+    height: 30vh;
+    border-radius: 10px;
+}
+
+/*Sexta parte*/
+#reservaciones {
+    position: relative;
+    background-image: url('Imagenes/fondos de pantalla-03.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 2em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reservation-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2em 2em;
+    border-radius: 10px;
+}
+
+.reservation-section .content {
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.reservation-section h2 {
+    font-family: 'Argent CF Demi Bold', serif;
+    font-size: 4em;
+    margin-bottom: 0.1em;
+    color: #642F75;
+}
+
+.reservation-section h3 {
+    font-family: 'Argent CF Demi Bold', serif;
+    font-size: 2.5em;
+    margin-bottom: 0.1em;
+    color: #642F75;
+}
+
+.reservation-section p {
+    font-family: 'Flareserif 821 Light BT', serif;
+    font-size: 1.7em;
+    text-align: justify;
+    color: #642F75;
+}
+
+.reservation-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reservation-section ul li {
+    font-family: 'Flareserif 821 Light BT', serif;
+    font-size: 1em;
+    color: #642F75;
+    margin-bottom: 1em;
+}
+
+.reservation-section ul li a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    background-color: rgba(100, 47, 117, 0.8);
+    transition: background-color 0.3s ease;
+}
+
+.reservation-section ul li a img {
+    display: block;
+    height: 70px;
+}
+
+.reservation-section ul li a:hover {
+    position: relative;
+    height: auto;
+    color: #642F75;
+}
+
+
+/* Septima parte*/
+#ayuda {
+    position: relative;
+    background-image: url('Imagenes/fondos de pantalla-02.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 2em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.help-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4em 2em;
+    border-radius: 10px;
+}
+
+.help-section .content {
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.help-section h2 {
+    text-align: center;
+    font-family: 'Argent CF Demi Bold', serif;
+    font-size: 4em;
+    margin-top: 0;
+    margin-bottom: 0.1em;
+    color: #642F75;
+}
+
+.help-section h3 {
+    font-family: 'Argent CF Demi Bold', serif;
+    font-size: 3em;
+    margin-bottom: 0.1em;
+    color: #642F75;
+}
+
+.help-section p {
+    font-family: 'Flareserif 821 Light BT', serif;
+    font-size: 1.5em;
+    color: #642F75;
+}
+
+.faq-item {
+    text-align: justify;
+    margin-bottom: 1em;
+}
+
+.faq-item h4 {
+    font-family: 'Argent CF Demi Bold', serif;
+    font-size: 2em;
+    color: #642F75;
+}
+
+.help-section p a {
+    font-family: 'Flareserif 821 Light BT', serif;
+    font-size: 1em;
+    color: #642F75;
+}
